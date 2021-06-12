@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+
+body {
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+table {
+
+    border: 10px;
+    border-color: black;
+    border-radius: 5%;
+
+}

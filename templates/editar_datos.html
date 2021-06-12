@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <br>
+    <div class="container" style="max-width: 650px; min-width: 400px;">
+    <div class="card">
+        <h2 class="card-header text-center">formulario de Registro</h2>
+        <div class="card-body">
+        <form id="myForm" action="/actualizar" method="POST">
+            <div class="form-group">
+            <legend>Datos de la Cuenta</legend>
+            
+            {% for usu in usuarios %} 
+            
+            <input type="hidden" name="id_usu" value="{{usu.0}}">
+
+            <label for="user">nombre:</label>
+            <input type="text" class="form-control" id="user" name="nombre_usu" value="{{usu.1}}">
+            <label for="ape">apellido:</label>
+            <input type="text" class="form-control" id="ape" name="apellido_usu" value="{{usu.2}}">
+            <label for="doc">documento:</label>
+            <input type="text" class="form-control" id="doc" name="documento_usu" value="{{usu.3}}">
+            <label for="tel">telefono:</label>
+            <input type="text" class="form-control" id="tel" name="telefono_usu" value="{{usu.4}}">
+            <label for="email">correo:</label>
+            <input type="email" class="form-control" id="email" name="correo_usu" value="{{usu.5}}">
+            <label for="usu">usuario:</label>
+            <input type="text" class="form-control" id="usu" name="usuario" value="{{usu.6}}">
+            <label for="usu">contraseña:</label>
+            <input type="password" class="form-control" id="usu" name="Pass" value="{{usu.7}}">
+            
+            </div>
+            
+            <input type="submit" class="btn btn-success" id="boton" value="Actualizar">
+
+            {% endfor %}
+        
+        
+        
+            
+        </form>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

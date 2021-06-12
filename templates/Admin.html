@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Admin.css') }}" media="screen"">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead class="bg-dark text-light text-center">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Documento</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>usuario</th>
+                    <th>contraseña</th>
+                    <th>acciones</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                {% for contact in contacts %}
+                
+                <tr>
+                    <td>{{contact.1}}</td>
+                    <td>{{contact.2}}</td>
+                    <td>{{contact.3}}</td>
+                    <td>{{contact.4}}</td>
+                    <td>{{contact.5}}</td>
+                    <td>{{contact.6}}</td>
+                    <td>{{contact.7}}</td>
+                    <td>
+                        <button class="btn btn-info"><a style="text-decoration: none; color: aliceblue;" href="/editar/{{contact.0}}">editar</a></button>
+                        <button class="btn btn-danger"><a style="text-decoration: none; color:aliceblue;" href="/eliminar/{{contact.0}}">eliminar</a></button>
+                    </td>
+                </tr>
+                
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

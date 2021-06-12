@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <br>
+    <div class="container" style="max-width: 650px; min-width: 400px;">
+    <div class="card">
+        <h2 class="card-header text-center">formulario de Registro</h2>
+        <div class="card-body">
+        <form id="myForm" action="/añadir_datos" method="POST">
+            <div class="form-group">
+            <legend>Datos de la Cuenta</legend>
+            <label for="user">nombre:</label>
+            <input type="text" class="form-control" id="user" name="nombre_usu" placeholder="nombre">
+            <label for="ape">apellido:</label>
+            <input type="text" class="form-control" id="ape" name="apellido_usu" placeholder="apellido_usu">
+            <label for="doc">documento:</label>
+            <input type="text" class="form-control" id="doc" name="documento_usu" placeholder="documento">
+            <label for="tel">telefono:</label>
+            <input type="text" class="form-control" id="tel" name="telefono_usu" placeholder="telefono">
+            <label for="email">correo:</label>
+            <input type="email" class="form-control" id="email" name="correo_usu" placeholder="correo">
+            <label for="usu">usuario:</label>
+            <input type="text" class="form-control" id="usu" name="usuario" placeholder="usuario">
+            <label for="usu">contraseña:</label>
+            <input type="password" class="form-control" id="usu" name="Pass" placeholder="contraseña">
+            </div>
+
+            
+            <input type="submit" class="btn btn-success" id="boton" value="Registrar">
+            <input type="reset" class="btn btn-danger" id="boton" value="Limpiar">
+        </form>
+        </div>
+    </div>
+    </div>
+<script>
+    
+</script>
+</body>
+</html>
