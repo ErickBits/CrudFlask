@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" media="screen"">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" style="max-width: 300px; min-width: 230px;">
+        <div class="card">
+            <h2 class="card-header text-center">formulario</h2>
+            <div class="card-body">
+            <form id="myForm" action="/añadir_datos" method="POST">
+                <div class="form-group">
+                <legend>Datos</legend>
+                <label for="user">nombre:</label>
+                <input type="text" class="form-control" id="user" name="nombre" placeholder="nombre">
+                <label for="email">correo:</label>
+                <input type="email" class="form-control" id="email" name="correo" placeholder="correo">
+                <label for="usu">contraseña:</label>
+                <input type="password" class="form-control" id="usu" name="contraseña" placeholder="contraseña">
+                </div>
+                <br>
+                    
+                <input type="submit" class="btn btn-dark" id="boton" value="Registrar">
+
+            </form>
+            </div>
+        </div>
+        </div>
+        
+</body>
+</html>
